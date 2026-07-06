@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large media files
+*.tiff
+*.tif
+*.ai
+*.pptx
+*.docx
+
+# ML pipeline outputs (regenerate by running scripts)
+*.pkl
+*.npy
+ML/data_clean/prep_output/
+ML/SHAP/output/
+ML/t-SNE/output/
+ML/PSO/output/
+ML/train/artifacts/
+ML/train/reports/
+ML/train/split_manifest.csv
+ML/train/run_log.txt
+
+# Archives
+*.zip
+
+# Logs
+*.log
+
+# Environments
+.env
+.venv/
+env/
