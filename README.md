@@ -1,4 +1,4 @@
-# Catalyst-Resolved Multimodal Literature Mining for Evidence-Constrained Temperature Screening of Ni-Based Methanol Steam Reforming Catalysts
+# Identity-Resolved Multimodal Literature Mining for Evidence-Constrained Temperature Screening of Ni-Based Methanol Steam Reforming Catalysts
 ## Overview
 
 A multimodal literature-mining and machine-learning workflow for the rational design of Ni-based
