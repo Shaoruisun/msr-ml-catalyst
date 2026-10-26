@@ -52,9 +52,9 @@ def _get_env_flag(name: str, default: bool) -> bool:
 
 
 DEFAULT_API_KEY = ""  # key comes from the environment only (see _validate_runtime_config)
-DEFAULT_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-DEFAULT_TEXT_MODEL = "qwen3.8-flash"
-DEFAULT_VISION_MODEL = "qwen3.8-flash"
+DEFAULT_BASE_URL = "https://api.openai.com/v1"
+DEFAULT_TEXT_MODEL = "gpt-5.6-luna"
+DEFAULT_VISION_MODEL = "gpt-5.6-luna"
 # Repository-relative defaults; override any of them through the
 # MSR_IN_DIR / MSR_OUT_DIR / MSR_TEMP_IMG_DIR environment variables.
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
