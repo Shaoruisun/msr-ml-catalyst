@@ -15,7 +15,7 @@ predictive uncertainty.
 ## Installation
 
 ```bash
-git clone https://github.com/<user>/msr-ml-catalyst
+git clone https://github.com/Shaoruisun/msr-ml-catalyst
 cd msr-ml-catalyst
 conda create -n nim_sr python=3.13
 conda activate nim_sr
@@ -60,10 +60,10 @@ Point `MSR_IN_DIR` at a folder of your PDFs (default: `data/pdfs/`).
 
 ## Results (deployed OOF weighted blend)
 
-| Protocol | Train R² | Test R² | \|gap\| |
-|---|---|---|---|
-| Seed-42 single split | 0.887 | 0.808 | 0.079 |
-| 10 seeds (42–51), mean ± SD | 0.887 ± 0.021 | 0.767 ± 0.040 | 0.119 ± 0.041 |
+| Protocol | Train R² | Test R² |
+|---|---|---|
+| Seed-42 single split | 0.887 | 0.808 |
+| 10 seeds (42–51), mean ± SD | 0.887 ± 0.021 | 0.767 ± 0.040 |
 
 Per-seed values: `ML/train/output/tables/random_seed_stability.csv`;
 per-row holdout predictions: `ML/train/output/tables/holdout_predictions.csv`.
