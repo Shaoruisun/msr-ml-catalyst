@@ -101,7 +101,7 @@ client = None
 def _strip_think_blocks(text: Any) -> Any:
     """[2026-09] Remove inline <think>...</think> reasoning from a response.
 
-    DashScope qwen3-family models return reasoning in a separate
+    gpt-5.6-luna models return reasoning in a separate
     reasoning_content field, so content is normally clean — this is a
     belt-and-suspenders guard for endpoints that inline the chain of
     thought into content, where it would corrupt JSON parsing."""
@@ -117,7 +117,7 @@ def _strip_think_blocks(text: Any) -> Any:
 def _call_chat(**kwargs):
     """[2026-09] Unified chat wrapper for every LLM call.
 
-    - Pins extra_body {"enable_thinking": False}: qwen3.8-flash thinks by
+    - Pins extra_body {"enable_thinking": False}: gpt-5.6-luna thinks by
       default and reasoning tokens are billed; disabling keeps calls fast,
       cheap, and the answer clean. Falls back once without the parameter
       if the endpoint rejects it.
@@ -19503,10 +19503,7 @@ def main():
     IN_DIR = runtime_config["IN_DIR"]
     OUT_DIR = runtime_config["OUT_DIR"]
     TEMP_IMG_DIR = runtime_config["TEMP_IMG_DIR"]
-    # [2026-09 R3b] Explicit timeout: DashScope occasionally establishes a
-    # connection that never completes (observed twice overnight, one >45 min);
-    # the SDK default read timeout did not fire there. 180 s x 2 retries
-    # bounds every call to <= ~9 min and lets the per-call try/except recover.
+   
     client = OpenAI(api_key=API_KEY, base_url=BASE_URL, timeout=180.0, max_retries=2)
 
     print("=" * 60)
